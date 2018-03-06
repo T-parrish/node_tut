@@ -1,0 +1,29 @@
+<section class="py-2">
+	<div class="row">
+		<div class="col-md-6 text-center">
+			<h1 class="display-3 mt-3 pt-5">
+			Web devvvv boooook
+			</h1>
+			<p class='lead'> learn weeeeeb deeeev </p>
+			<form action="/charge" method="POST">
+			<script
+				src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+				data-key="{{stripePublishableKey}}"
+				data-amount="2500"
+				data-name="node-tutorial"
+				data-description="testing stuff"
+				data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+				data-locale="auto">
+			</script>
+			<script>
+				// hide default stripe button
+				document.getElementsByClassName('stripe-button-el')[0].style.display = 'none'
+			</script>
+			<button type="submit" class="btn btn-outline-dark text-white btn-lg"> purchase for $25</button>
+			</form>
+		</div>
+		<div class='col-md-6'>
+			<img src="/img/smashing.png" alt="smashing">
+		</div>
+	</div>
+</section>
